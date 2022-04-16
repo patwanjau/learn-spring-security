@@ -12,8 +12,6 @@ public class InMemoryUserRepository implements UserRepository {
 
     private final ConcurrentMap<Long, User> users = new ConcurrentHashMap<Long, User>();
 
-    //
-
     @Override
     public Iterable<User> findAll() {
         return this.users.values();
